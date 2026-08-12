@@ -125,8 +125,6 @@ class EvalResult:
 #   f_groundedness = Feedback(provider.groundedness_measure_with_cot_reasons)
 # ---------------------------------------------------------------------------
 
-# Common English stopwords are ignored so overlap reflects *content* words,
-# not filler (otherwise "is"/"a"/"the" inflate every score).
 STOPWORDS: set[str] = {
     "a", "an", "the", "is", "are", "was", "were", "be", "been", "being",
     "of", "in", "on", "at", "to", "for", "with", "as", "by", "and", "or",

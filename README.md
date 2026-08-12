@@ -16,7 +16,7 @@ Hướng dẫn thao tác đầy đủ nằm trong [`guide_lab.md`](guide_lab.md)
 
 ## Yêu cầu & Quick Start
 
-**Yêu cầu:** Python 3.11 trở lên. Cần **OpenAI API key** để chạy `domain_assistant.py`
+**Yêu cầu:** Python 3.11 trở lên. Cần **Groq API key** để chạy `domain_assistant.py`
 (Part 3 — sinh 20 actual answers từ RAG thật); phần code core (`template.py`, Part 1–2)
 không cần API key.
 
@@ -25,7 +25,7 @@ python --version                        # xác nhận 3.11+
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 pytest tests/ -v                         # baseline: 42 tests collected, 42 failed
-cp .env.example .env                     # rồi điền OPENAI_API_KEY (chỉ cần cho Part 3)
+cp .env.example .env                     # rồi điền GROQ_API_KEY (chỉ cần cho Part 3)
 ```
 
 Chi tiết đầy đủ theo hệ điều hành, xử lý lỗi thường gặp: xem [`guide_lab.md`](guide_lab.md) Mục 2 và Mục 15.
@@ -307,12 +307,12 @@ Bonus không thay thế phần điểm bắt buộc:
 
 ## Checklist trước khi nộp
 
-- [ ] `python validate_golden_dataset.py` báo `PASS`.
-- [ ] Toàn bộ required tests pass.
-- [ ] `golden_dataset.json` đủ 5 Easy + 7 Medium + 5 Hard + 3 Adversarial.
-- [ ] Đã kiểm tra `artifacts/actual_answers.json` sau khi chạy RAG.
-- [ ] Exercise 3.2 có đủ năm metrics và ba cases thấp nhất.
-- [ ] Exercise 3.3 có rubric 1–5 và edge cases.
-- [ ] `reflection.md` có ba 5 Whys analyses và improvement log.
-- [ ] `solution/solution.py` là bản hoàn thiện của `template.py`.
-- [ ] Không commit `.env`, API key hoặc dữ liệu giảng viên cung cấp ngoài repo.
+- [✓] `python validate_golden_dataset.py` báo `PASS`.
+- [✓] Toàn bộ required tests pass.
+- [✓] `golden_dataset.json` đủ 5 Easy + 7 Medium + 5 Hard + 3 Adversarial.
+- [✓] Đã kiểm tra `artifacts/actual_answers.json` sau khi chạy RAG.
+- [✓] Exercise 3.2 có đủ năm metrics và ba cases thấp nhất.
+- [✓] Exercise 3.3 có rubric 1–5 và edge cases.
+- [✓] `reflection.md` có ba 5 Whys analyses và improvement log.
+- [✓] `solution/solution.py` là bản hoàn thiện của `template.py`.
+- [✓] Không commit `.env`, API key hoặc dữ liệu giảng viên cung cấp ngoài repo.
